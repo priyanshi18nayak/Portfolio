@@ -1,0 +1,341 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(C86032C0-1EBA-45DA-AD17-1564AF157F5D_4_5005_c.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-weight: 400;
+    
+
+}
+nav li {
+    padding-left: 30px;
+}
+
+
+nav li a:hover {
+    color: #1e90ff;
+}
+
+
+.primary-info-container {
+    padding: 20px;
+    margin-top: 80px; 
+    width: 100%;
+    text-align: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.primary-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.primary-text-name {
+
+    font-size: 6em;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+    margin: 0;
+    color: #1e90ff;
+    letter-spacing: 3px;
+    border-right: 5px solid;
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:typing 10s  infinite,
+    cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+@keyframes typing  {
+    from{
+        width: 0;
+    }
+}
+
+.primary-text-desc {
+    font-size: 3em;
+    margin: 10px 0;
+    opacity: 1;
+    height: 6vh;
+    margin-bottom: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    transform: translateX(0);
+    position: relative;
+    animation: fade-in-out 5s ease-in-out infinite;
+}
+
+.primary-text-desc::after {
+    content: "Problem Solver";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    animation: text-change 5s infinite;
+}
+
+@keyframes fade-in-out {
+    0%, 100%  {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    25%, 75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+@keyframes text-change {
+    0%, 50% {
+        content: "Problem Solver";
+    }
+    50.01%, 100% {
+        content: "Developer";
+    }
+}
+
+.secondary-info-container {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+
+
+}
+#about{
+    width: 50%;
+}
+.about-title{
+    margin-bottom: 20px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 100px;
+
+}
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    margin: 40px auto;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.about-text h2 {
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #f0f0f0;
+    font-size: 1.2em;
+    
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.skills-container {
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.skills-title {
+    margin-bottom: 20px;
+    color: #1e90ff;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: #3c3c3c;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background-color: #1e90ff;
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    margin: 0;
+    color: #f0f0f0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+footer .buttons {
+    margin: 10px 0;
+}
+
+footer .buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+footer .buttons .btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.2);
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer .social-icon {
+    margin: 0 10px;
+}
+
+footer .social-icon a {
+    color: #1e90ff;
+    font-size: 2em;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+footer .social-icon a:hover {
+    color: #ffffff;
+    transform: scale(3); 
+}
